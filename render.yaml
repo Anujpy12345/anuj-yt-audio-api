@@ -1,1 +1,10 @@
-
+services:
+  - type: web
+    name: yt-audio-api
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PORT
+        value: 10000
